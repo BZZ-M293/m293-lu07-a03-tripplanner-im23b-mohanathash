@@ -3,12 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Reisebuchungs-Formular</title>
+  <style>
+    html * {
+      font-family: Roboto;
+      background-color: #F5f5dc;
+    }
+  </style>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+  <fieldset>
+    <label>Nachbarländer der Schweiz:<br>
+      <select name="Nachbarländer der Schweiz" size="4" multiple>
+        <option value="Deutschland">Deutschland</option>
+        <option value="Österreich">Österreich</option>
+        <option value="Italien">Italien</option>
+        <option value="Frankreich">Frankreich</option>
+      </select>
+    </label>
+  </fieldset>
 
+  <fieldset>
+      <label>Unterkunft
+        <input type="radio" id="ro" name="Zahlmethode" value="Rot">
+        <label for="ro"> Rot</label>
+        <input type="radio" id="bl" name="Zahlmethode" value="Blau">
+        <label for="bl"> Blau</label>
+        <input type="radio" id="gr" name="Zahlmethode" value="Grün">
+        <label for="gr"> Grün</label>
+        <input type="radio" id="sc" name="Zahlmethode" value="Schwarz">
+        <label for="sc"> Schwarz</label>
+      </label>
+  </fieldset>
+
+</form>
 </body>
 </html>
