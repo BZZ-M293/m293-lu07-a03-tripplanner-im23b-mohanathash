@@ -18,7 +18,7 @@
 <form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
   <fieldset>
     <label>Nachbarländer der Schweiz:<br>
-      <select name="Nachbarländer der Schweiz" size="4" multiple>
+      <select name="Nachbarländer der Schweiz" size="4" single>
         <option value="Deutschland">Deutschland</option>
         <option value="Österreich">Österreich</option>
         <option value="Italien">Italien</option>
@@ -29,15 +29,77 @@
 
   <fieldset>
       <label>Unterkunft
-        <input type="radio" id="ro" name="Zahlmethode" value="Rot">
-        <label for="ro"> Rot</label>
-        <input type="radio" id="bl" name="Zahlmethode" value="Blau">
-        <label for="bl"> Blau</label>
-        <input type="radio" id="gr" name="Zahlmethode" value="Grün">
-        <label for="gr"> Grün</label>
-        <input type="radio" id="sc" name="Zahlmethode" value="Schwarz">
-        <label for="sc"> Schwarz</label>
+        <input type="radio" id="Hot" name="Unterkunftart" value="Hotel">
+        <label for="Hot"> Hotel</label>
+        <input type="radio" id="Hos" name="Unterkunftart" value="Hostel">
+        <label for="Hos"> Hostel</label>
+        <input type="radio" id="Fer" name="Unterkunftart" value="Ferienwohnung">
+        <label for="Fer"> Ferienwohnung</label>
+
       </label>
+  </fieldset>
+
+  <fieldset>
+    <label for="start_date">Anfangsdatum:</label>
+    <input type="date" id="start_date" name="start_date"required><br><br>
+
+    <label for="end_date">Enddatum:</label>
+    <input type="date" id="end_date" name="end_date"required><br><br>
+
+    <label for="dauer">Reisedauer (1-21 Tage):</label>
+    <input type="number" id="dauer" name="dauer" min="1" max="21"required><br><br>
+  </fieldset>
+
+  <fieldset>
+    <label for="Anzahl">Anzahlpersonen:</label>
+    <input type="number" id="Anzahl" name="duration" required><br><br>
+  </fieldset>
+
+  <fieldset>
+    <label>Fluggesellschaft:<br>
+      <select name="Fluggesellschaft" size="4" single>
+        <option value="Emirates">Emirates</option>
+        <option value="Swiss">Swiss</option>
+        <option value="Qatar">Qatar</option>
+        <option value="Lufthansa">Lufthansa</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <label>Dienstleistungen</label>
+    <input type="checkbox" name="Dienstleistung[]" value="priority-check-in" id="check1">
+    <label for="check1">Priority-Check-in</label>
+    <input type="checkbox" name="Dienstleistung[]" value="zusätzliches Handgepäck" id="check2" >
+    <label for="check2">zusätzliches Handgepäck</label>
+    <input type="checkbox" name="Dienstleistung[]" value="Buchung eines Mietwagens" id="check3" >
+    <label for="check3">Buchung eines Mietwagens</label>
+
+  </fieldset>
+  <fieldset>
+    <label for="destination">Reiseziel auswählen:</label>
+    <input type="text" id="destination" name="destination" list="destinations" required>
+    <datalist id="destinations">
+      <option value="Paris"></option>
+      <option value="Rom"></option>
+      <option value="Barcelona"></option>
+      <option value="Madeira"></option>
+      <option value="Ibiza"></option>
+      <option value="Madrid"></option>
+    </datalist>
+  </fieldset>
+
+  <fieldset>
+    <label for="ihre Email">Geben Sire E-mail ein:</label>
+    <input type="email" id="ihre Email" name="ihre Email" required>
+  </fieldset>
+
+  <fieldset>
+    <button type="reset">reset</button>
+  </fieldset>
+
+  <fieldset>
+    <button type="submit">submit</button>
   </fieldset>
 
 </form>
